@@ -5,7 +5,7 @@ public class CustomerFactory {
             return new OmnivoreCustomer();
         } else if (CustomerType == "vegan") {
             return new VeganCustomer();
-        } else if (CustomerType == "Vegitarian") {
+        } else if (CustomerType == "Vegetarian") {
             return new VegetarianCustomer();
         } else {
             System.out.println("error getting correct customer- returning NullCustomer");
