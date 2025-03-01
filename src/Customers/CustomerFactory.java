@@ -1,3 +1,4 @@
+package Customers;
 public class CustomerFactory {
     
     public Customer makeCustomer(CustomerTypes customerType) {

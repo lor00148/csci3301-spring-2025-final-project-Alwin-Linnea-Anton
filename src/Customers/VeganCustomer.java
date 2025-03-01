@@ -1,3 +1,4 @@
+package Customers;
 public class VeganCustomer extends Customer {
 
     @Override

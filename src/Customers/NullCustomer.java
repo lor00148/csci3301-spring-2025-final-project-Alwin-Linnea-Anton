@@ -1,3 +1,4 @@
+package Customers;
 //example of the signleton pattern
 public class NullCustomer extends Customer {
 
