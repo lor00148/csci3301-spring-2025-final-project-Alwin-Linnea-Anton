@@ -1,11 +1,11 @@
 public class CustomerFactory {
     
-    public Customer makeCustomer(String CustomerType) {
-        if(CustomerType == "omnivore"){
+    public Customer makeCustomer(CustomerTypes customerType) {
+        if(customerType == CustomerTypes.OMNIVORE){
             return new OmnivoreCustomer();
-        } else if (CustomerType == "vegan") {
+        } else if (customerType == CustomerTypes.VEGAN) {
             return new VeganCustomer();
-        } else if (CustomerType == "Vegetarian") {
+        } else if (customerType == CustomerTypes.VEGETARIAN) {
             return new VegetarianCustomer();
         } else {
             System.out.println("error getting correct customer- returning NullCustomer");
