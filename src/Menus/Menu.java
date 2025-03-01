@@ -1,5 +1,6 @@
 package Menus;
 import Customers.Customer;
+import Foods.Food;
 
 import java.util.ArrayList;
 public class Menu {
@@ -10,6 +11,10 @@ public class Menu {
     {
         this.customer = customer;
         this.foods = foods;
+    }
+    public ArrayList<Food> getFoods()
+    {
+        return foods;
     }
 
 }
