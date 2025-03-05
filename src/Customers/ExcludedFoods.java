@@ -1,6 +1,5 @@
 package Customers;
 
-import java.util.Arrays;
 
 public class ExcludedFoods extends CustomerDecorator{
     public ExcludedFoods(Customer customer, String excludedFoods) {
