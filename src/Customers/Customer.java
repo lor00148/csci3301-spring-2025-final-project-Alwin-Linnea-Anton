@@ -7,7 +7,10 @@ import Menus.Menu;
 
 public abstract class Customer implements Observer{
     // protected ArrayList<Ingredients> bannedFoods;
+
     protected Menu menu = new Menu(null);
+    protected String excludedFoods;
+    protected String preferences;
     protected String name;
     public MenuServer serverMenu;
 
@@ -18,6 +21,8 @@ public abstract class Customer implements Observer{
     {
         serverMenu = menuServer;
         this.name = name;
+
+    
 
     }
     public void update(ArrayList<Food> meals) {
