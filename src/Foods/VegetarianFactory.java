@@ -15,6 +15,18 @@ public class VegetarianFactory extends FoodFactory
         {
             return new Banana();
         }
+        if(food == FoodTypes.Cheese)
+        {
+            return new Cheese();
+        }
+        if(food == FoodTypes.Milk)
+        {
+            return new Milk();
+        }
+        if(food == FoodTypes.Eggs)
+        {
+            return new Eggs();
+        }
         return null;
     }
 }

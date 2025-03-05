@@ -8,15 +8,9 @@ public abstract class Customer implements Observer{
     protected Menu menu;
     String name;
 
-    String name;
-    protected Menu menu;
-    
-
-//     protected ArrayList<String> MenuItems;
-
-//     public void update(ArrayList<String> meals) {
-//         MenuItems = meals;
-//     }
+    public void update(ArrayList<String> meals) {
+        MenuItems = meals;
+    }
 
     public abstract void getMenu();
     
