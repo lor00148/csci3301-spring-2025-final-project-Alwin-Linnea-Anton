@@ -1,3 +1,5 @@
+package MenuSubject;
+
 import Customers.Customer;
 
 public interface Server {

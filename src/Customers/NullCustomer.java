@@ -4,9 +4,7 @@ public class NullCustomer extends Customer {
 
     private static NullCustomer UNIQUE_INSTANCE = new NullCustomer();
 
-    private NullCustomer() {
-
-    }
+    
 
     @Override
     public void getMenu() {

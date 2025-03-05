@@ -1,17 +1,39 @@
 package Customers;
 import java.util.ArrayList;
 
+import Foods.Food;
+import MenuSubject.MenuServer;
+import Menus.Menu;
+
 public abstract class Customer implements Observer{
     // protected ArrayList<Ingredients> bannedFoods;
-    protected String name;
+
+    protected Menu menu = new Menu(null);
     protected String excludedFoods;
     protected String preferences;
-    protected ArrayList<String> MenuItems;
+    protected String name;
+    public MenuServer serverMenu;
 
-    public void update(ArrayList<String> meals) {
-        MenuItems = meals;
+    public Customer()
+    {
+    }
+    public Customer(String name, MenuServer menuServer)
+    {
+        serverMenu = menuServer;
+        this.name = name;
+
+    
+
+    }
+    public void update(ArrayList<Food> meals) {
+        this.menu.setFoods(meals);
     }
 
     public abstract void getMenu();
+
+    public String getName()
+    {
+        return name;
+    }
     
 }
