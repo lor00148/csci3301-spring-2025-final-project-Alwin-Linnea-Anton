@@ -1,4 +1,5 @@
 package Customers;
+import Foods.Food;
 public class VegetarianCustomer extends Customer{
     @Override
     public void getMenu() 
