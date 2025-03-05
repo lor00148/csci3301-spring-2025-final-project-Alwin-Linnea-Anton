@@ -1,20 +1,23 @@
 package Menus;
-import Customers.Customer;
 import Foods.Food;
 
 import java.util.ArrayList;
 public class Menu {
     protected ArrayList<Food> foods;
-    protected Customer customer;
 
-    public Menu(ArrayList<Food> foods, Customer Customer)
+    public Menu(ArrayList<Food> foods)
     {
-        this.customer = customer;
         this.foods = foods;
     }
     public ArrayList<Food> getFoods()
     {
         return foods;
     }
+
+    public void setFoods(ArrayList<Food> foods)
+    {
+        this.foods = foods;
+    }
+    
 
 }
