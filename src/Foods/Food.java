@@ -17,7 +17,7 @@ public class Food {
     }
     public String toString()
     {
-        return type.toString() + " is a food of the " + type.toString() + " category";
+        return type.toString();
     } 
     
 }

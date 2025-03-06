@@ -7,7 +7,7 @@ import Customers.Customer;
 import Foods.Food;
 public class MenuServer implements Server {
     private List<Customer> customers;
-    private ArrayList<Food> menuItems;
+    private ArrayList<Food> menuItems = new ArrayList<Food>();
     
     public MenuServer()
     {
@@ -37,4 +37,14 @@ public class MenuServer implements Server {
 		this.menuItems = foods;
 		menuChanged();
 	}
+
+    public void addItem(Food food) {
+        menuItems.add(food);
+        menuChanged();
+    }
+
+
+    public ArrayList<Food> getMenuItems() {
+        return menuItems;
+    }
 }

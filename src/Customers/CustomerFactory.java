@@ -2,13 +2,13 @@ package Customers;
 import MenuSubject.MenuServer;
 public class CustomerFactory {
     
-    public Customer makeCustomer(CustomerTypes customerType, String name, MenuServer menuServer) {
+    public Customer makeCustomer(CustomerTypes customerType, MenuServer menuServer) {
         if(customerType == CustomerTypes.OMNIVORE){
-            return new OmnivoreCustomer(name, menuServer);
+            return new OmnivoreCustomer(menuServer);
         } else if (customerType == CustomerTypes.VEGAN) {
-            return new VeganCustomer(name, menuServer);
+            return new VeganCustomer(menuServer);
         } else if (customerType == CustomerTypes.VEGETARIAN) {
-            return new VegetarianCustomer(name, menuServer);
+            return new VegetarianCustomer(menuServer);
         } else {
             System.out.println("error getting correct customer- returning NullCustomer");
             return NullCustomer.getInstance();

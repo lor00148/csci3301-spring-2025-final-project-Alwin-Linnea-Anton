@@ -6,34 +6,27 @@ import MenuSubject.MenuServer;
 import Menus.Menu;
 
 public abstract class Customer implements Observer{
-    // protected ArrayList<Ingredients> bannedFoods;
 
-    protected Menu menu = new Menu(null);
+    protected Menu menu;
     protected String excludedFoods;
     protected String preferences;
-    protected String name;
     public MenuServer serverMenu;
 
     public Customer()
     {
     }
-    public Customer(String name, MenuServer menuServer)
+    public Customer(MenuServer menuServer)
     {
         serverMenu = menuServer;
-        this.name = name;
-
-    
+        menu = new Menu(serverMenu.getMenuItems());
 
     }
+
     public void update(ArrayList<Food> meals) {
         this.menu.setFoods(meals);
     }
 
     public abstract void getMenu();
 
-    public String getName()
-    {
-        return name;
-    }
     
 }

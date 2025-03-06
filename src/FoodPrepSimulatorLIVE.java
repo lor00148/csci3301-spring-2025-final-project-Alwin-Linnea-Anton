@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import Customers.*;
+import MenuSubject.MenuServer;
 
 
 public class FoodPrepSimulatorLIVE {
@@ -8,9 +9,11 @@ public class FoodPrepSimulatorLIVE {
         CustomerFactory factory = new CustomerFactory();
         Scanner scanner = new Scanner(System.in);
 
+        MenuServer menuServer = new MenuServer();
+
         System.out.println("Please enter Omnivore, Vegetarian, or Vegan");
         CustomerTypes customerType = CustomerTypes.valueOf(scanner.nextLine().toUpperCase());
-        Customer newCustomer = factory.makeCustomer(customerType);
+        Customer newCustomer = factory.makeCustomer(customerType, menuServer);
 
         System.out.println("Please Enter your name");
         String name = scanner.nextLine();
@@ -23,6 +26,8 @@ public class FoodPrepSimulatorLIVE {
         System.out.println("Please enter any food preferences, if none please enter None (Please separate them using commas)");
         String preferences = scanner.nextLine();
         newCustomer = new Preferences(newCustomer, preferences);
+
+        System.out.println();
         
         newCustomer.getMenu();
         scanner.close();

@@ -17,10 +17,14 @@ public class RestaurantThing {
         FoodFactory factory = new OmnivoreFactory();
         foods.add(factory.makeFood(FoodTypes.Steak));
         foods.add(factory.makeFood(FoodTypes.Banana));
-        menuServer.setMenu(foods);
         CustomerFactory customerFactory = new CustomerFactory();
-        Customer John = customerFactory.makeCustomer(CustomerTypes.VEGAN, "John", menuServer);
-        menuServer.notifyObservers();
+        Customer John = customerFactory.makeCustomer(CustomerTypes.VEGAN, menuServer);
+        John.getMenu();
+        menuServer.setMenu(foods);
+
+        menuServer.addItem(factory.makeFood(FoodTypes.Apple));
+        menuServer.addItem(factory.makeFood(FoodTypes.Eggs));
+        System.out.println();
         John.getMenu();
     }
 }

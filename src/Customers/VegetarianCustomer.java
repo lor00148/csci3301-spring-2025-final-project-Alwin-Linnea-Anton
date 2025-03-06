@@ -5,9 +5,9 @@ import MenuSubject.MenuServer;
 
 public class VegetarianCustomer extends Customer{
 
-    public VegetarianCustomer(String name, MenuServer serverMenu)
+    public VegetarianCustomer(MenuServer serverMenu)
     {
-        super(name, serverMenu);
+        super(serverMenu);
         this.serverMenu.registerObserver(this);
     }
 
@@ -15,7 +15,6 @@ public class VegetarianCustomer extends Customer{
     @Override
     public void getMenu() 
     {
-        System.out.println("Menu for " + getName() + ":");
         for(int i = 0; i < menu.getFoods().size(); i++)
         {
             if(menu.getFoods().get(i).getCategory() == FoodCategory.Vegan || menu.getFoods().get(i).getCategory() == FoodCategory.Vegetarian)
