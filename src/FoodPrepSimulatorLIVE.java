@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 import Customers.*;
+import Foods.FoodFactory;
+import Foods.FoodTypes;
+import Foods.OmnivoreFactory;
 import MenuSubject.MenuServer;
 
 
@@ -8,8 +11,19 @@ public class FoodPrepSimulatorLIVE {
     public static void main(String args[]) {
         CustomerFactory factory = new CustomerFactory();
         Scanner scanner = new Scanner(System.in);
-
         MenuServer menuServer = new MenuServer();
+        FoodFactory foodFactory = new OmnivoreFactory();
+        
+        // Creating our Menu
+        menuServer.addItem(foodFactory.makeFood(FoodTypes.Apple));
+        menuServer.addItem(foodFactory.makeFood(FoodTypes.Eggs));
+        menuServer.addItem(foodFactory.makeFood(FoodTypes.Banana));
+        menuServer.addItem(foodFactory.makeFood(FoodTypes.Cheese));
+        menuServer.addItem(foodFactory.makeFood(FoodTypes.Milk));
+        menuServer.addItem(foodFactory.makeFood(FoodTypes.Pear));
+        menuServer.addItem(foodFactory.makeFood(FoodTypes.Pork));
+        menuServer.addItem(foodFactory.makeFood(FoodTypes.Ribs));
+        menuServer.addItem(foodFactory.makeFood(FoodTypes.Steak));
 
         System.out.println("Please enter Omnivore, Vegetarian, or Vegan");
         CustomerTypes customerType = CustomerTypes.valueOf(scanner.nextLine().toUpperCase());

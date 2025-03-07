@@ -8,7 +8,7 @@ public class Preferences extends CustomerDecorator{
     }
 
     public void getMenu() {
-        customer.getMenu(); //Gets previous getMenu() outputs
-        System.out.println("Customer Preferences: " + preferences); //Prints the customer Preferences
+        customer.getMenu(); // Since getMenu() returns void, we call getMenu() to get previous print statements
+        System.out.println("Customer Preferences: " + preferences); // Prints the customer Preferences
     }
 }

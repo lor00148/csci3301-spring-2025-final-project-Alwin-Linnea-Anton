@@ -8,7 +8,7 @@ public class ExcludedFoods extends CustomerDecorator{
     }
 
     public void getMenu() {
-        customer.getMenu(); //Gets previous getMenu() outputs
-        System.out.println("Excluded Foods: " + excludedFoods); //Prints the excluded foods
+        customer.getMenu(); // Since getMenu() returns void, we call getMenu() to get previous print statements
+        System.out.println("Excluded Foods: " + excludedFoods); // Then we print Excluded foods
     }
 }

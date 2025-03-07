@@ -8,8 +8,8 @@ import Menus.Menu;
 public abstract class Customer implements Observer{
 
     protected Menu menu;
-    protected String excludedFoods;
-    protected String preferences;
+    protected String excludedFoods; // For Decorator
+    protected String preferences; // For Decorator
     public MenuServer serverMenu;
 
     public Customer()
